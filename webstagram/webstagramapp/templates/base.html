@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Instagram</title>
+        {% load static %}
         <link href = "base.css" rel= "stylesheet" type = "text/css" />
         <link rel = "icon" href = "img/icon.png">
     </head>
@@ -29,5 +30,9 @@
                 </div>
             </div>
         </header>
+
+        {% block content %}
+
+        {% endblock %}
     </body>
 </html>

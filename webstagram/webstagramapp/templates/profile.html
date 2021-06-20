@@ -1,20 +1,23 @@
 <!DOCTYPE html>
+
+{% block content %}
 <html>
     <head>
         <meta charset="UTF-8">
         <title>Instagram</title>
-        <link href = "profile.css" rel = "stylesheet" type = "text/css" />
-        <link rel = "icon" href="img/icon.png">
+        {% load static %}
+        <link href = "{% static 'css/profile.css' %}" rel = "stylesheet" type = "text/css" />
+        <link rel = "icon" href="{% static 'img/icon.png' %}">
     </head>
 
     <body>
         <header>
             <div class = "SSU_likelion_btn">
-                <button type = "button" id = "likelionBtn"><img class = "userPhoto" src = "img/ssu_likelion_logo_150x150.png" alt = "likelion SSU logo 150 x 150"></button>
+                <button type = "button" id = "likelionBtn"><img class = "userPhoto" src = "{% static 'img/ssu_likelion_logo_150x150.png' %}" alt = "likelion SSU logo 150 x 150"></button>
             </div>
 
             <div class = "userInfo">
-                <div class="userName"><h1>LikeLionSSU</h1>
+                <div class="userName"><h1>{{author.username}}</h1>
                 <button id = "editProfileBtn">프로필 편집</button>
                 </div>
 
@@ -33,23 +36,25 @@
         </header>
 
         <main>
-            <img class = "photoPosting" src = "img/lionface.png" alt = "photo posting">
+            <img class = "photoPosting" src = "{% static 'img/lionface.png' %}" alt = "photo posting">
             <ul aria-hidden = "true">
                 <li>Likes: 0</li>
                 <li>Commnets: 0</li>
             </ul>
 
-            <img class = "photoPosting" src = "img/lionface.png" alt = "photo posting">
+            <img class = "photoPosting" src = "{% static 'img/lionface.png' %}" alt = "photo posting">
             <ul aria-hidden = "true">
                 <li>Likes: 0</li>
                 <li>Commnets: 0</li>
             </ul>
 
-            <img class = "photoPosting" src = "img/lionface.png" alt = "photo posting">
+            <img class = "photoPosting" src = "{% static 'img/lionface.png' %}" alt = "photo posting">
             <ul aria-hidden = "true">
                 <li>Likes: 0</li>
                 <li>Commnets: 0</li>
             </ul>
         </main>
     </body>
+
+    {% endblock %}
 </html>
