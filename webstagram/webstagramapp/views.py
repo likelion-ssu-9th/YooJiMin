@@ -8,3 +8,5 @@ def feed(request, id):
     contents=get_object_or_404(Content,pk=id)
     return render(request, 'feed.html', {'post':contents})
 
+def profile(request):
+    return render(request, 'profile.html')
